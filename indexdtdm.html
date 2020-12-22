@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> bài tập thiết kế website</title>
+        <meta charset="utf-88">
+        <link rel="stylesheet" href="C:\Users\PC\1821050679\btlindex.css">
+    </head>
+    <body>
+        <section class="web">
+            <h1>NOBITA.COM</h1>
+        <div class="links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="link1"><a href="C:/Users/PC/1821050679/dientu.html">Điện tử </a>
+                <div class="links1">
+                    <a href="C:/Users/PC/1821050679/dienthoai.html">điện thoại</a>
+                    <a href="C:/Users/PC/1821050679/maytinh.html">máy tính</a>
+                </div></li>
+                <li class="link1"><a href="C:/Users/PC/1821050679/thoitrang.html">Thời trang </a>
+                <div class="links1">
+                    <a href="C:/Users/PC/1821050679/quanao.html">quần,áo</a>
+                    <a href="C:/Users/PC/1821050679/giaydep.html">giầy,dép</a>
+                </div></li>
+                <li class="link1"><a href="C:/Users/PC/1821050679/sach.html">Sách</a>
+            </ul>
+        </div>
+        </section>
+        <section id="Home" class="hideable-section">
+        <p>Dễ dàng mua sắm ở khắp mọi nơi</p>
+        </section>
+        <script>
+            $(function(){
+                $('section div ul li a').click(function() {
+                    var $section =$('#'+$(this).data('section'));
+                    if(!$section.is('!:visible')){
+                        $('.hideable-section').hide();
+                        $section.fadeIn();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
